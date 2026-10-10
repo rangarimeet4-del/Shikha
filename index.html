@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Stan Universe 💜</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f2ff;
+      color: #30213d;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      color: white;
+      background: linear-gradient(135deg, #32105c, #873bd0, #dc6eac);
+    }
+
+    header h1 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      line-height: 1.7;
+    }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(#25103be0, #63239bdc),
+        url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
+
+    .hero h2 {
+      font-size: clamp(27px, 4vw, 44px);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      line-height: 1.8;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .box, .form-box, .list-box {
+      background: white;
+      border: 1px solid #eadcf8;
+      border-radius: 16px;
+      padding: 23px;
+      box-shadow: 0 8px 25px #32105c12;
+    }
+
+    .box h3 {
+      color: #7835b5;
+      margin-bottom: 12px;
+    }
+
+    .box p {
+      line-height: 1.8;
+    }
+
+    .founder {
+      border-top: 4px solid #bd65ce;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    h2, .list-box h3 {
+      margin-bottom: 20px;
+    }
+
+    .form-box h2, .list-box h3 {
+      color: #7835b5;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9c6ee;
+      border-radius: 9px;
+      background: white;
+      font-size: 15px;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #b47be2;
+    }
+
+    button {
+      border: none;
+      padding: 14px;
+      border-radius: 9px;
+      background: linear-gradient(120deg, #7136b5, #c24c9c);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.88;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+    }
+
+    .msg {
+      margin-top: 15px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .member-card {
+      padding: 15px;
+      margin-bottom: 12px;
+      background: #f8f1ff;
+      border-left: 4px solid #a855c9;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .member-card small {
+      display: block;
+      margin-top: 7px;
+      color: #665775;
+    }
+
+    footer {
+      margin-top: 45px;
+      padding: 25px 15px;
+      background: #28103f;
+      color: white;
+      text-align: center;
+      line-height: 2;
+    }
+
+    @media (max-width: 750px) {
+      .about-grid, .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 27px;
+      }
+
+      .hero {
+        padding: 50px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>K-STAN UNIVERSE 💜</h1>
+    <p>Founded &amp; Managed by <b>Shikha Nagbhide</b></p>
+    <p>Field Project 2026</p>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to No.1 Korean Fan Club</h2>
+    <p>
+      A fan community for BTS, BLACKPINK, Stray Kids
+      and all K-Pop lovers!
+    </p>
+  </section>
+
+  <section class="section about-grid">
+
+    <div class="box">
+      <h3>🎯 Project Objective</h3>
+      <p>
+        Korean Fan Club Management System for registering
+        and managing K-Pop fans.
+      </p>
+    </div>
+
+    <div class="box founder">
+      <h3>👩‍💻 Founder &amp; Admin</h3>
+      <p><b>Name:</b> Shikha Nagbhide</p>
+      <p><b>Project:</b> K-Stan Universe</p>
+      <p><b>Role:</b> Creator, Designer &amp; Manager</p>
+    </div>
+
+    <div class="box">
+      <h3>💻 Technology Used</h3>
+      <p>
+        HTML5, CSS3, JavaScript, Google Apps Script
+        and LocalStorage.
+      </p>
+    </div>
+
+  </section>
+
+  <main class="section main-grid">
+
+    <section class="form-box">
+      <h2>💜 Join Fan Club</h2>
+
+      <form id="joinForm">
+
+        <input
+          id="name"
+          type="text"
+          placeholder="Full Name"
+          required
+        >
+
+        <select id="bias">
+          <option value="BTS">BTS</option>
+          <option value="BLACKPINK">BLACKPINK</option>
+          <option value="Stray Kids">Stray Kids</option>
+          <option value="TWICE">TWICE</option>
+          <option value="SEVENTEEN">SEVENTEEN</option>
+          <option value="NewJeans">NewJeans</option>
+        </select>
+
+        <input
+          id="phone"
+          type="tel"
+          inputmode="numeric"
+          placeholder="10-digit WhatsApp Number"
+          pattern="[0-9]{10}"
+          maxlength="10"
+          required
+        >
+
+        <input
+          id="city"
+          type="text"
+          placeholder="Your City"
+          required
+        >
+
+        <select id="plan">
+          <option value="Free - Basic">Free - Basic</option>
+          <option value="Stan - ₹299/year">Stan - ₹299/year</option>
+          <option value="Ultimate - ₹799/year">
+            Ultimate - ₹799/year
+          </option>
+        </select>
+
+        <button id="joinButton" type="submit">
+          Join Club Now 💜
+        </button>
+
+      </form>
+
+      <p id="message" class="msg" role="status"></p>
+    </section>
+
+    <section class="list-box">
+      <h3>👥 Registered Members (<span id="count">0</span>)</h3>
+      <div id="memberList">
+        <p>No members registered yet.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Made with 💜 by <b>Shikha Nagbhide</b>
+    <br>
+    Field Project - K-Stan Universe © 2026
+    <br>
+    Guided by: [Teacher Name] | All Rights Reserved
+  </footer>
+
+  <script>
+    const form = document.getElementById("joinForm");
+    const message = document.getElementById("message");
+    const memberList = document.getElementById("memberList");
+    const count = document.getElementById("count");
+    const joinButton = document.getElementById("joinButton");
+
+    let members = [];
+
+    try {
+      const saved = JSON.parse(
+        localStorage.getItem("kfan") || "[]"
+      );
+
+      members = Array.isArray(saved) ? saved : [];
+    } catch (error) {
+      members = [];
+    }
+
+    function displayMembers() {
+      count.textContent = members.length;
+      memberList.replaceChildren();
+
+      if (members.length === 0) {
+        const empty = document.createElement("p");
+        empty.textContent = "No members registered yet.";
+        memberList.appendChild(empty);
+        return;
+      }
+
+      members.forEach(function(member) {
+        const card = document.createElement("div");
+        card.className = "member-card";
+
+        const title = document.createElement("b");
+        title.textContent = member.name + " - " + member.bias;
+
+        const details = document.createElement("small");
+        details.textContent =
+          member.city + " | " + member.plan;
+
+        card.append(title, details);
+        memberList.appendChild(card);
+      });
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const city = document.getElementById("city").value.trim();
+
+      if (!name || !city) {
+        message.textContent = "Please fill all required fields.";
+        return;
+      }
+
+      if (!/^[0-9]{10}$/.test(phone)) {
+        message.textContent =
+          "Please enter a valid 10-digit phone number.";
+        return;
+      }
+
+      const member = {
+        name: name,
+        bias: document.getElementById("bias").value,
+        phone: phone,
+        city: city,
+        plan: document.getElementById("plan").value,
+        date: new Date().toLocaleDateString()
+      };
+
+      try {
+        const updatedMembers = [...members, member];
+
+        localStorage.setItem(
+          "kfan",
+          JSON.stringify(updatedMembers)
+        );
+
+        members = updatedMembers;
+        displayMembers();
+
+        message.textContent =
+          "🎉 Welcome " + name +
+          "! Tum K-Stan Club mein add ho gaye!";
+
+        form.reset();
+      } catch (error) {
+        message.textContent =
+          "Could not save data. Browser storage may be full or disabled.";
+      }
+    });
+
+    displayMembers();
+  </script>
+
+</body>
+</html>
